@@ -18,9 +18,9 @@ A Flutter plugin for working with the masterpass in-app API.
 
   s.ios.deployment_target = '8.0'
 
-  s.preserve_paths = 'MasterPassKit.framework'
+  s.preserve_paths = 'Frameworks/ios-arm64_arm7/MasterPassKit.framework'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework MasterPassKit' }
-  s.vendored_frameworks = 'MasterPassKit.framework'
+  s.vendored_frameworks = ['Frameworks/real_devices/MasterPassKit.framework', 'Frameworks/simulated_devices/MasterPassKit.framework']
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
 
