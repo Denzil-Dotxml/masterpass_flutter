@@ -33,7 +33,7 @@ public class SwiftMasterpassPlugin: NSObject, FlutterPlugin {
     public func checkout(code: String, amount: String, system: String, key: String, flutterResult: @escaping FlutterResult) {
         let masterpass = MPMasterPass();
         let masterpassDelegate = MasterpassDelegate(flutterResult: flutterResult);
-        String masterpassSystem: MPSystem;
+        var masterpassSystem: MPSystem;
         system == "Live" ? (masterpassSystem = MPSystem.live) : (masterpassSystem = MPSystem.test);
         masterpass.checkout(withCode: code, amount: amount, apiKey: key, system: masterpassSystem, controller: UIApplication.shared.delegate?.window??.rootViewController, delegate: masterpassDelegate)
     }
