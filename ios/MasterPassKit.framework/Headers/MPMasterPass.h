@@ -60,10 +60,10 @@ typedef NS_ENUM(NSInteger, MPError) {
 -(void)showLoadingDialogFromController:(UIViewController *)presentingController;
 -(void)hideLoadingDialog;
 
--(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate;
--(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN;
--(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate customerId:(NSString*)customerId;
--(void)checkoutWithCode:(NSString *)code amount:(NSString *)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN customerId:(NSString*)customerId;
+-(void)checkoutWithCode:(NSString *)code amount:(double)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate;
+-(void)checkoutWithCode:(NSString *)code amount:(double)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN;
+-(void)checkoutWithCode:(NSString *)code amount:(double)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate customerId:(NSString*)customerId;
+-(void)checkoutWithCode:(NSString *)code amount:(double)amount apiKey:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN customerId:(NSString*)customerId;
 
 -(void)preRegister:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate;
 -(void)preRegister:(NSString *)apiKey system:(MPSystem)system controller:(UIViewController *)presentingController delegate:(id<MPMasterPassDelegate>)delegate preMSISDN:(NSString *)preMSISDN;

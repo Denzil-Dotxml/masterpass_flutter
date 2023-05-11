@@ -22,7 +22,7 @@ public class SwiftMasterpassPlugin: NSObject, FlutterPlugin {
             let code = arguments["code"] as! String
             let system = arguments["system"] as! String
             let key = arguments["key"] as! String
-            let amount = arguments["amount"] as! String
+            let amount = arguments["amount"] as! double
             checkout(code: code, amount:amount, system: system, key: key, flutterResult: result)
         } else {
             result("Flutter method not implemented on iOS")
@@ -30,7 +30,7 @@ public class SwiftMasterpassPlugin: NSObject, FlutterPlugin {
     }
     
     /// Perform the masterpass checkout with the given transaction code, system , and api key.
-    public func checkout(code: String, amount: String, system: String, key: String, flutterResult: @escaping FlutterResult) {
+    public func checkout(code: String, amount: double, system: String, key: String, flutterResult: @escaping FlutterResult) {
         let masterpass = MPMasterPass();
         let masterpassDelegate = MasterpassDelegate(flutterResult: flutterResult);
         var masterpassSystem: MPSystem;
